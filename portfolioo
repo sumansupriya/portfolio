@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Suman Supriya B – iOS developer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=IBM+Plex+Sans:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#EEF1F6;--surface:#FFFFFF;--ink:#14182B;--muted:#586078;--line:#D5DAE6;--accent:#3B4BFF;--accent-ink:#FFFFFF;--ok:#0A8A5C;--bad:#C2362B;
+  color-scheme:light;
+  box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){--bg:#0E1120;--surface:#171B30;--ink:#EAEDF8;--muted:#9AA3BF;--line:#2A3050;--accent:#8C97FF;--accent-ink:#0E1120;--ok:#3DD598;--bad:#FF7A70;color-scheme:dark}
+}
+:root[data-theme="dark"]{--bg:#0E1120;--surface:#171B30;--ink:#EAEDF8;--muted:#9AA3BF;--line:#2A3050;--accent:#8C97FF;--accent-ink:#0E1120;--ok:#3DD598;--bad:#FF7A70;color-scheme:dark}
+*{box-sizing:border-box}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 17px/1.6 "IBM Plex Sans",system-ui,sans-serif}
+h1,h2,h3{font-family:"Bricolage Grotesque","Helvetica Neue",Arial,sans-serif;line-height:1.1;margin:0;letter-spacing:-.02em}
+a{color:inherit}
+a:focus-visible,button:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
+.wrap{max-width:1000px;margin:0 auto;padding:0 22px}
+nav{display:flex;gap:22px;padding:22px 0;font-size:15px;flex-wrap:wrap}
+nav a{text-decoration:none;color:var(--muted)}
+nav a:hover{color:var(--ink)}
+.hero{display:grid;grid-template-columns:1.1fr .9fr;gap:44px;align-items:center;padding:40px 0 72px}
+.hero h1{font-size:clamp(2.6rem,7vw,4.6rem);font-weight:800}
+.hero p.lead{font-size:1.15rem;color:var(--muted);max-width:34ch;margin:22px 0 28px}
+.btns{display:flex;gap:12px;flex-wrap:wrap}
+.btn{display:inline-block;padding:12px 20px;border-radius:10px;font-weight:500;text-decoration:none;border:1.5px solid var(--ink)}
+.btn.p{background:var(--accent);border-color:var(--accent);color:var(--accent-ink)}
+.receipt{background:var(--surface);border:1.5px solid var(--line);border-radius:6px 6px 0 0;padding:22px 22px 26px;position:relative;
+  -webkit-mask:conic-gradient(from -45deg at bottom,#0000,#000 1deg 89deg,#0000 90deg) 50%/14px 100%;mask:conic-gradient(from -45deg at bottom,#0000,#000 1deg 89deg,#0000 90deg) 50%/14px 100%;padding-bottom:34px}
+.receipt h3{font-size:1.1rem;margin-bottom:4px}
+.receipt small{color:var(--muted);font-size:13px}
+.row{display:flex;justify-content:space-between;gap:10px;padding:11px 0;border-bottom:1px dashed var(--line);font-size:15px}
+.tag{font-weight:500}
+.ok{color:var(--ok)}.bad{color:var(--bad)}
+.row.hide{opacity:.25}
+.run{margin-top:16px;width:100%;cursor:pointer;background:var(--ink);color:var(--bg);border:0;border-radius:8px;padding:11px;font:500 15px "IBM Plex Sans",sans-serif}
+section{padding:56px 0;border-top:1px solid var(--line)}
+section>.wrap>h2{font-size:clamp(1.8rem,4vw,2.6rem);margin-bottom:30px}
+.proj{display:grid;grid-template-columns:200px 1fr;gap:12px 36px;padding:28px 0;border-bottom:1px solid var(--line)}
+.proj:last-child{border-bottom:0}
+.proj h3{font-size:1.45rem}
+.stack{color:var(--muted);font-size:14px;margin-top:8px}
+.proj ul{margin:0;padding-left:1.1em}
+.proj li{margin-bottom:8px;max-width:68ch}
+.status{display:inline-block;font-size:13px;color:var(--accent);margin-top:8px;font-weight:500}
+dl{display:grid;grid-template-columns:200px 1fr;gap:14px 36px;margin:0}
+dt{font-weight:500}
+dd{margin:0;color:var(--muted)}
+.edu{display:grid;grid-template-columns:200px 1fr;gap:6px 36px;margin-bottom:22px}
+.edu b{font-weight:500}
+.edu span{color:var(--muted)}
+footer{padding:64px 0 48px;border-top:1px solid var(--line)}
+footer h2{font-size:clamp(2rem,5vw,3.2rem);margin-bottom:18px}
+footer p{color:var(--muted);margin:0 0 22px;max-width:46ch}
+@media (max-width:760px){
+  .hero{grid-template-columns:1fr;gap:34px;padding-top:16px}
+  .proj,dl,.edu{grid-template-columns:1fr}
+}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.row{transition:none!important}}
+.row{transition:opacity .4s}
+</style>
+</head>
+<body>
+<div class="wrap">
+<nav><a href="#projects">Projects</a><a href="#skills">Skills</a><a href="#education">Education</a><a href="#contact">Contact</a></nav>
+
+<header class="hero">
+  <div>
+    <h1>Suman Supriya B</h1>
+    <p class="lead">iOS developer who cares about payments that are right every single time. B.Tech CSE student in Bengaluru, building in Swift.</p>
+    <div class="btns"><a class="btn p" href="#projects">See my projects</a><a class="btn" href="mailto:sumansupriya1503@gmail.com">Email me</a></div>
+  </div>
+  <div>
+    <div class="receipt" aria-live="polite">
+      <h3>Seat 14B – Event booking</h3>
+      <small>Two customers book at the same moment</small>
+      <div class="row"><span>Request A</span><span class="tag ok" id="a">Waiting</span></div>
+      <div class="row"><span>Request B</span><span class="tag" id="b">Waiting</span></div>
+      <div class="row"><span>Result</span><span class="tag" id="r">Seat is free</span></div>
+      <button class="run" id="run" type="button">Send both requests</button>
+    </div>
+  </div>
+</header>
+</div>
+
+<section id="projects"><div class="wrap">
+  <h2>Projects</h2>
+  <article class="proj">
+    <div><h3>Event Booking &amp; Ticketing Platform</h3><div class="stack">React, TypeScript, Node.js, Express, MySQL, JWT</div></div>
+    <ul>
+      <li>Full-stack platform with event browsing, seat selection and cancellations.</li>
+      <li>Stops double-booking with MySQL transactions and row-level locking, so every booking is accurate.</li>
+      <li>Admin dashboard with sales statistics, role-based access and reports.</li>
+      <li>REST APIs for events, bookings and users.</li>
+    </ul>
+  </article>
+  <article class="proj">
+    <div><h3>Collaborative Task Board</h3><div class="stack">Swift, UIKit, Storyboards, UICollectionView, Node.js, MySQL, JWT</div><span class="status">In progress</span></div>
+    <ul>
+      <li>Trello-style iOS app with boards, lists and cards, plus drag-and-drop to move cards between lists.</li>
+      <li>Relational MySQL schema for users, boards, lists, cards and an activity log.</li>
+      <li>REST APIs with JWT authentication and team-based access control, used by the app.</li>
+    </ul>
+  </article>
+  <article class="proj">
+    <div><h3>Disaster Management iOS App</h3><div class="stack">Swift, UIKit, Storyboards, Auto Layout, Xcode</div></div>
+    <ul>
+      <li>Simple, clear interface so people can find information fast in an emergency.</li>
+      <li>UICollectionView and Swift collections organise and display disaster information.</li>
+      <li>Tested and debugged with Xcode and console logs.</li>
+    </ul>
+  </article>
+</div></section>
+
+<section id="skills"><div class="wrap">
+  <h2>Skills</h2>
+  <dl>
+    <dt>iOS</dt><dd>Swift, Xcode, UIKit, Storyboards, Auto Layout, UICollectionView, Xcode debugger</dd>
+    <dt>Languages</dt><dd>Swift, Python, JavaScript, TypeScript, Java, C, C++</dd>
+    <dt>Backend and web</dt><dd>Node.js, Express, REST APIs, JWT, React, HTML5, CSS3</dd>
+    <dt>Databases</dt><dd>MySQL and SQL: schema design, transactions, row-level locking</dd>
+    <dt>Tools</dt><dd>Git, GitHub, AI tools for development, debugging and research</dd>
+    <dt>Working style</dt><dd>Attention to detail, reads docs and error logs first, learns tools quickly, works well in teams</dd>
+  </dl>
+</div></section>
+
+<section id="education"><div class="wrap">
+  <h2>Education and certifications</h2>
+  <div class="edu"><b>2023 – present</b><div><b>B.Tech, Computer Science and Engineering</b><br><span>Alliance School of Advanced Computing, Alliance University. CGPA 8.1. Volunteered at Alliance Literary Festival and Alliance One; joined a university hackathon and ideathon.</span></div></div>
+  <div class="edu"><b>2021 – 2023</b><div><b>12th Grade, St. Joseph’s PU College</b><br><span>88.16%. Class Representative.</span></div></div>
+  <div class="edu"><b>2021</b><div><b>10th Grade, Pearl Valley English School</b><br><span>85.76%. Event Manager.</span></div></div>
+  <div class="edu"><b>Certifications</b><div><span>Database Management Systems (NPTEL), Compiler Design (NPTEL), Oracle Certified Java Developer (Oracle)</span></div></div>
+</div></section>
+
+<footer id="contact"><div class="wrap">
+  <h2>Let’s build something reliable.</h2>
+  <p>I’m looking for iOS roles, including payments work. Languages: English, Hindi, Telugu, Kannada.</p>
+  <a class="btn p" href="mailto:sumansupriya1503@gmail.com">sumansupriya1503@gmail.com</a>
+</div></footer>
+
+<script>
+(function(){
+  var a=document.getElementById('a'),b=document.getElementById('b'),r=document.getElementById('r'),btn=document.getElementById('run');
+  var step=0;
+  btn.addEventListener('click',function(){
+    if(step===1){a.textContent='Waiting';a.className='tag';b.textContent='Waiting';b.className='tag';r.textContent='Seat is free';r.className='tag';btn.textContent='Send both requests';step=0;return}
+    a.textContent='Lock acquired';a.className='tag ok';
+    b.textContent='Waiting for lock';b.className='tag';
+    r.textContent='Booking in progress';r.className='tag';
+    setTimeout(function(){
+      a.textContent='Booked';
+      b.textContent='Rejected: seat taken';b.className='tag bad';
+      r.textContent='One booking, no double-booking';r.className='tag ok';
+      btn.textContent='Reset';step=1;
+    },900);
+  });
+})();
+</script>
+</body>
+</html>
